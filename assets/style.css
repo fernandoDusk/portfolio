@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: #101820;
+}
+  
+.nav {
+    position: fixed;
+    width: 100%;
+    height: 4.4rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding-inline: 1rem;
+}
+  
+.logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.highlight {
+    color: #f27a35;
+}
+  
+.nav-list {
+    display: flex;
+    flex-direction: column;  
+    list-style: none;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;  
+    clip-path: circle(100px at 90% -15%);
+    transition: 1s ease-out;
+    pointer-events: none;  
+    justify-content: space-around;  
+    align-items: center;  
+    padding: 1.25rem 0;  
+}
+  
+.nav-list a {
+    font-size: 1.5rem;
+    color: #fff;
+    padding-block: 1rem;
+    text-decoration: none;
+    opacity: 0;  
+}
+
+.nav-list a:hover {
+    color: #f27a35;
+}
+  
+.hamburger {
+    display: block;
+    border: none;
+    background: none;
+    border-top: 3px solid #f27a35;
+    cursor: pointer;
+    z-index: 2;  
+    position: relative;  
+}
+  
+.hamburger::after,
+.hamburger::before {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #f27a35;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+}
+  
+.nav.active .nav-list {
+    clip-path: circle(1500px at 90% -15%);
+    pointer-events: all;  
+}
+  
+.nav.active .nav-list a {
+    opacity: 1;  
+    transition: opacity 0.5s ease-in;
+}
+  
+.nav.active .hamburger {
+    position: fixed;
+    top: 26px;
+    right: 16px;
+    border-top-color: transparent;  
+}
+  
+.nav.active .hamburger::before {
+    transform: rotate(135deg);
+}
+  
+.nav.active .hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+.home {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    height: 100vh;
+}
+
+.text-home {
+    color: #fff;
+}
+
+.text-home h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.text-home p {
+    font-size: 2rem;
+}
+
+.text-animation {
+    color: #f27a35;
+}
+
+.icons {
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.icons a {
+    transition: all 0.2s ease-in;
+    font-size: 1.5rem;
+    color: #fff;
+    transform: translateY(0);
+}
+
+.icons a:hover {
+    transform: translateY(-5px);
+}
+
+.icons a:hover .fa-github {
+    color: #454545;
+}
+
+.icons a:hover .fa-linkedin {
+    color: #0e76a8;
+}
+
+.icons a:hover .fa-whatsapp {
+    color: #25d366;
+}
+
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 70px;
+    margin-inline: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.nav:not(.active) .icons {
+    display: flex;
+}
+
+.nav.active .icons {
+    display: none;
+}
+
+
+@media (min-width: 750px) {
+    .nav-list {
+        position: static;  
+        width: auto; 
+        height: auto;
+        clip-path: none; 
+        background: none;
+        flex-direction: row;
+        gap: 2rem;
+        pointer-events: all;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .hamburger {
+        display: none;
+    }
+    
+    .nav-list a {
+        font-size: 18px;
+        opacity: 1;
+    }
+}

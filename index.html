@@ -4,23 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernando de Souza | Desenvolvedor</title>
+
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-            <a href="index.html">FERNANDO <span class="highlight">| DEV</span></a>
-            <button class="hamburger"></button>
-            <ul class="nav-list">
-                <li><a href="#home">INÍCIO</a></li>
-                <li><a href="#about">SOBRE</a></li>
-                <li><a href="#services">SERVIÇOS</a></li>
-                <li><a href="#contact">CONTATO</a></li>
-            </ul>
-        </nav>
-    </header>
+        <header class="header">
+            <nav class="nav">
+                <a href="index.html" class="logo">FERNANDO <span class="highlight">| DEV</span></a>
+                <button class="hamburger"></button>
+                <ul class="nav-list">
+                    <li><a href="#home">INÍCIO</a></li>
+                    <li><a href="#about">SOBRE</a></li>
+                    <li><a href="#services">SERVIÇOS</a></li>
+                    <li><a href="#contact">CONTATO</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main id="home" class="home">
+                <div class="text-home">
+                    <h1>Fernando de Souza</h1>
+                    <p>Desenvolvedor <span class="text-animation"></span></p>
+                </div>
+                <div class="icons">
+                    <a href="https://github.com/fernandoDusk" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/fernando-d-sz/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/5522992052853" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+        </main>
 
-    <main>
-        <section id="home"></section>
-    </main>
+        <footer class="footer">
+            <p>&copy; 2024 Desenvolvido por Fernando | Dev.</p>
+        </footer>
+
+    <script src="assets/JS/hamburger.js"></script>
+    <script src="assets/JS/text-animation.js"></script>
 </body>
 </html>
