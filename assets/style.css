@@ -23,7 +23,7 @@ body {
 }
   
 .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: #fff;
 }
@@ -114,7 +114,7 @@ body {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-grow: 1;
     width: 100%;
@@ -123,15 +123,22 @@ body {
 
 .text-home {
     color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 }
 
 .text-home h1 {
-    font-size: 4rem;
+    font-size: 2rem;
     font-weight: bold;
+    padding: 0.5rem;
 }
 
 .text-home p {
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-weight: 300;
 }
 
 .text-animation {
@@ -139,38 +146,128 @@ body {
 }
 
 .icons {
-    position: absolute;
-    bottom: 1rem;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 1.2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem 0rem;
+    margin-top: auto;
 }
 
 .icons a {
-    transition: all 0.2s ease-in;
-    font-size: 1.5rem;
-    color: #fff;
-    transform: translateY(0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+}
+
+.icons img {
+    width: 1.5rem;
+    opacity: 1;
 }
 
 .icons a:hover {
     transform: translateY(-5px);
 }
 
-.icons a:hover .fa-github {
-    color: #454545;
+.about {
+    padding: 2.5rem;
+    color: #fff;
+    font-size: 1.2rem;
 }
 
-.icons a:hover .fa-linkedin {
-    color: #0e76a8;
+.about-title p {
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+.about-title h2 {
+    display: flex;
+    color: #f27a35;
+    font-size: 2rem;
+    justify-content: center;
 }
 
-.icons a:hover .fa-whatsapp {
-    color: #25d366;
+.about-me h3 {
+    font-size: 1.5rem;
 }
 
+.about-skills h2 {
+    color: #f27a35;
+}
+
+.skills-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 2rem 0rem;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card img {
+    width: 50%;
+    opacity: 1;
+}
+
+.services-start {
+    padding: 2.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.services-start p {
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.services-start h2 {
+    display: flex;
+    color: #f27a35;
+    font-size: 2rem;
+    justify-content: center;
+}
+
+.services-card {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem 0rem;
+    background-color: #f27a35;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.item img {
+    width: 20%;
+    opacity: 1;
+    margin: 1rem;
+}
 
 .footer {
     background-color: #000;
@@ -181,15 +278,6 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-}
-
-
-.nav:not(.active) .icons {
-    display: flex;
-}
-
-.nav.active .icons {
-    display: none;
 }
 
 
@@ -214,5 +302,17 @@ body {
     .nav-list a {
         font-size: 18px;
         opacity: 1;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .text-home h1 {
+        font-size: 4rem;
+    }
+
+    .text-home p {
+        font-size: 2rem;
     }
 }
